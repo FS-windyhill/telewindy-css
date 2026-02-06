@@ -128,12 +128,14 @@
     color: #ffffff;
     border: 1px solid #d2d2d281;
     background: rgba(236, 236, 236, 0);
+    box-shadow: 0 0px 2px rgb(255 255 255);
 }
 
 .header-icon-btn.right {
     color: #ffffff;
     border: 1px solid #d2d2d281;
     background: rgba(236, 236, 236, 0);
+    box-shadow: 0 0px 2px rgb(255 255 255);
 }
 
 .app-footer {
@@ -148,6 +150,7 @@
     border: 1px solid rgba(181, 181, 181, 0.6);
     background: rgba(251, 251, 251, 0);
     color: rgb(198, 198, 198, 0.8);
+
 }
 
 
@@ -155,6 +158,7 @@
     border: 1px solid rgba(181, 181, 181, 0.6);
     background: rgba(251, 251, 251, 0);
     color: rgb(198, 198, 198, 0.8);
+
 }
 
 #task-input {
@@ -162,6 +166,7 @@
     background: #2C2C2C !important;
     font-size: 1rem;
     color: #ffffff;
+
 }
 
 #contact-list-wrapper {
@@ -479,6 +484,7 @@ span {
     border: 1px solid #9d9d9dcc;
     color: #ffffff;
     background: rgba(60, 60, 60, 0.25) !important;
+
 }
 
 
