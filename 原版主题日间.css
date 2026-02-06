@@ -1,0 +1,55 @@
+
+
+/* =========================================
+   3. 气泡通用样式 (Bubble)
+   ========================================= */
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 11px;
+    max-width: 96%;
+    opacity: 1;
+    position: relative;
+}
+
+
+/* ─── 我的消息气泡 ─── */
+.message-wrapper.user .message-bubble {
+    background: #e0ffb2b5;
+    border: 1.2px solid #a0b481d1;
+    padding: 7px 10px 8px 10px;
+    border-top-right-radius: 3px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #000;
+
+}
+
+/* ─── ta的消息气泡 ─── */
+.message-wrapper.ai .message-bubble {
+    background: #ffffffa6;
+    border: 1.2px solid #979797a2;
+    padding: 7px 10px 8px 10px;
+    border-top-left-radius: 3px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #222;
+
+}
+
+/* --- 时间戳样式 (重点) --- */
+.msg-time {
+    font-size: 11px;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 2px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    opacity: 0.8;
+    /* 新增：让时间戳紧贴气泡右下角 */
+    align-self: flex-end;        /* 靠右对齐 */
+    margin: 1px 3px;           /* 可选：稍微往左缩一点，不贴边太死 */
+}
+
+
+

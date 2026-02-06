@@ -1,0 +1,444 @@
+
+
+/* =========================================
+   3. 气泡通用样式 (Bubble)
+   ========================================= */
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 11px;
+    max-width: 96%;
+    opacity: 1;
+    position: relative;
+}
+
+
+/* ─── 我的消息气泡 ─── */
+.message-wrapper.user .message-bubble {
+    background: #e1ffb5b5;
+    border: 1.2px solid #edffcfd1;
+    padding: 7px 10px 8px 10px;
+    border-top-right-radius: 3px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #000;
+
+}
+
+/* ─── ta的消息气泡 ─── */
+.message-wrapper.ai .message-bubble {
+    background: #303030a6;
+    border: 1.2px solid #7d7d7da2;
+    padding: 7px 10px 8px 10px;
+    border-top-left-radius: 3px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    color: #fff;
+
+}
+
+/* --- 时间戳样式 (重点) --- */
+.msg-time {
+    font-size: 11px;
+    color: rgba(255,255,255,0.9);
+    text-shadow: 0 0 2px rgba(0,0,0,0.8), 0 0 4px rgba(0,0,0,0.5);
+    white-space: nowrap;
+    opacity: 0.8;
+    /* 新增：让时间戳紧贴气泡右下角 */
+    align-self: flex-end;        /* 靠右对齐 */
+    margin: 1px 3px;           /* 可选：稍微往左缩一点，不贴边太死 */
+}
+
+
+
+
+/* =========================================
+   夜间模式主题
+   ========================================= */
+
+.app-header {
+    border-bottom: none;
+    text-align: center;
+    flex-shrink: 0;
+    background: #111312;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+.app-header h1{
+    color: #ffffff;
+}
+
+.contact-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #adadad;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-icon-btn.left {
+    color: #ffffff;
+    border: 1px solid #d2d2d281;
+    background: rgba(236, 236, 236, 0);
+}
+
+.header-icon-btn.right {
+    color: #ffffff;
+    border: 1px solid #d2d2d281;
+    background: rgba(236, 236, 236, 0);
+}
+
+.app-footer {
+    border-top: none;
+    background: #1c1c1c;
+    
+}
+
+#reroll-footer-btn {
+    border: 1px solid rgba(181, 181, 181, 0.5);
+    background: rgba(251, 251, 251, 0);
+    color: rgb(198, 198, 198, 0.8);
+}
+
+
+#send-button {
+    border: 1px solid rgba(181, 181, 181, 0.5);
+    background: rgba(251, 251, 251, 0);
+    color: rgb(198, 198, 198, 0.8);
+}
+
+#task-input {
+    border: 1px solid rgba(181, 181, 181, 0.5);
+    background: #2C2C2C !important;
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+#contact-list-wrapper {
+    background: rgba(52, 52, 52, 0.85); /* 深灰色毛玻璃 */
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+.contact-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.settings-content {
+    background: rgba(45, 45, 45, 0.95);
+}
+
+h3 {
+    color: #e0e0e0 !important;
+}
+
+.main-option {
+    background: rgba(255, 255, 255, 0.05);
+    color: #ddd;
+}
+
+.tab-item.active {
+    background: #3b3b3b;
+    color: #fefefe;
+}
+
+.tab-item {
+
+    color: #cccccc;
+    background-color: #222222;
+
+}
+
+.api-label {
+    color: #ffffff;
+
+}
+
+.api-label2 {
+    color: #ffffff;
+
+}
+
+.gist-sync-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+}
+
+.wi-btn.icon-only {
+    background: rgba(0, 0, 0, 0.05);
+    color: #ffffff;
+}
+
+
+.setting-input {
+    background: #444;
+    border-color: #9f9f9f;
+    color: #fff;
+}
+
+input#gist-id-input {
+    background: #444;
+    border-color: #9f9f9f;
+    color: #fff;
+}
+
+.input-group input, .input-group textarea {
+    background: #444;
+    border-color: #9f9f9f;
+    color: #fff;
+}
+
+
+.wi-toolbar-group label {
+    font-weight: 600;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+#main-cancel {
+    background: #3A3A3A;
+    color: #ffffff;
+}
+
+button#main-confirm {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #876eff;
+}
+
+.wi-btn.secondary {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+.gist-btn {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+.gist-btn.primary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #876eff !important;
+}
+
+.wi-btn.primary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #876eff !important;
+}
+
+.input-group label {
+
+    color: #ffffff;
+
+}
+
+.wi-form-group label {
+
+    color: #ffffff;
+
+}
+
+.modal.glass-panel {
+    background: rgba(52, 52, 52, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+
+.wi-section-title {
+
+    color: #ffffff;
+
+}
+
+.small-btn {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+.wi-sidebar-header {
+
+    color: #ffffff;
+
+}
+
+.wi-btn.danger {
+    background: rgba(255, 33, 33, 0.5);
+    color: #ffcaca;
+    border: 1px solid rgba(255, 80, 80, 0.9);
+}
+
+#del-preset-btn.icon-btn.danger {
+
+    background: rgba(255, 33, 33, 0.5);
+    color: #ffcaca;
+    border: 1px solid rgba(255, 80, 80, 0.9);
+}
+
+
+#modal-cancel {
+    background: #3A3A3A;
+    color: #ffffff;
+}   
+
+#modal-save {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #876eff;
+}
+
+.history-btn {
+    background: #3A3A3A;
+    color: #ffffff;
+}
+
+button#save-preset-btn.icon-btn {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+.api-btn.primary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #876eff;
+}
+
+.api-btn {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+.modal h2 {
+
+    color: #ffffff;
+
+}
+
+
+span {
+    color: #fff;
+}
+
+#custom-model-select.model-select {
+    background: #444;
+    border-color: #9f9f9f;
+    color: #fff;
+}
+
+.icon-btn.danger {
+    background: rgba(255, 33, 33, 0.5);
+    color: #ffcaca;
+    border: 1px solid rgba(255, 80, 80, 0.9);
+}
+
+#custom-css-panel {
+
+    background: rgba(255, 255, 255, 0.03);
+
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.icon-btn {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+.menu-panel {
+    position: relative;               /* 改成 relative 或者 fixed 都行 */
+    background: rgba(103, 103, 103, 0.9);  /* 或者 #fff */
+    border-radius: 12px;
+    min-width: 200px;
+    z-index: 2;                       /* 关键：面板在遮罩上面！ */
+    text-align: center;
+}
+
+.menu-panel button {
+    width: 100%;
+    padding: 12px 7px;
+    text-align: center;
+    border: none;
+    color: #ffffff;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.menu-panel button[data-action="delete"] {
+    color: #ff1900;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.8);
+    font-weight: 500;
+}
+
+
+.edit-box {
+    background: #575757;
+}
+
+
+.settings-sidebar {
+
+    background: #222222;
+
+}
+
+
+#edit-msg-textarea {
+    width: 93%;
+    height: 150px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    resize: none;
+}
+
+.edit-buttons .primary {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid #876eff;
+}
+
+
+.edit-buttons button {
+    background: #3A3A3A;
+    color: #ffffff;
+    border: 0.7px solid #a9a9a9;
+}
+
+
+.setting-input, body.dark-mode #gist-id-input, textarea {
+    background: #444;
+    border-color: #9f9f9f;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
