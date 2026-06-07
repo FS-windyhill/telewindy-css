@@ -1,0 +1,150 @@
+
+
+/* =========================================
+   3. 气泡通用样式 (Bubble)
+   ========================================= */
+
+.message-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3px;
+    margin-bottom: 5px;
+    max-width: 96%;
+    opacity: 1;
+    position: relative;
+}
+
+.message-wrapper.user {
+    flex-direction: row;
+    align-self:flex-start;
+}
+
+
+
+/* ─── 我的消息气泡 ─── */
+.message-wrapper.user .message-bubble {
+    background: #ffffff00;
+    border: 1.2px solid #97979700;
+    padding: 5px;
+    border-top-right-radius: 0px;
+    color: #ffffff;
+
+}
+
+/* ─── ta的消息气泡 ─── */
+.message-wrapper.ai .message-bubble {
+    background: #ffffff00;
+    border: 1.2px solid #97979700;
+    padding: 5px;
+    border-top-right-radius: 0px;
+    color: #ffffff;
+
+}
+
+/* --- 时间戳样式 (重点) --- */
+.msg-time {
+    display: none;
+}
+
+/* --- 头像样式调整 --- */
+.avatar-container {
+    display: none;
+}
+
+.contact-avatar{
+    display: none;
+}
+
+/* ============ 头尾 ================= */
+.app-header {
+    position: relative;
+    padding-left: 24px;
+    padding-right: 24px;
+    padding-top: calc(12px + env(safe-area-inset-top, 40px));
+    border-bottom: 1px solid rgba(255, 255, 255, 0) ;
+    padding-bottom: 12px;
+    background-color: #ffffff00;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+.app-header h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    color: #fff;
+    display: none;
+}
+
+.header-icon-btn.left, .header-icon-btn.right {
+    background: rgb(255 255 255 / 0%);
+    border: 1px solid rgb(167 167 167 / 90%);
+    color: #818181;
+
+}
+
+
+.app-footer {
+
+    border-top: 1px solid rgba(255, 255, 255, 0);
+
+    /* gap: 7px; */
+    background: rgb(255 255 255 / 0%);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    border-radius: 0;
+}
+
+#task-input {
+    background: rgb(255 255 255 / 0%) !important;
+    border: 1px solid #adadad85;
+}
+
+#reroll-footer-btn {
+
+    background: rgb(255 255 255 / 0%);
+    border: 1px solid #adadad85;
+}
+
+#upload-image-btn {
+
+    background: rgba(255, 255, 255, 0);
+    border: 1px solid #adadad85;
+}
+
+
+#send-button {
+
+    background: rgba(251, 251, 251, 0);
+    border: 1px solid #adadad85;
+}
+
+#contact-list-wrapper{
+    background: rgb(255 255 255 / 0%);
+    border: 1px solid rgb(255 255 255 / 0%);
+}
+
+.contact-info h3 {
+
+    color: #d8d8d8;
+
+}
+
+.contact-info p {
+
+    color: #9e9e9e;
+
+}
+
+.tab-bar {
+    border-top: 1px solid rgba(126, 126, 126, 0);
+    background: rgba(57, 57, 57, 0);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+#chat-window{
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+

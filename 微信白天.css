@@ -1,0 +1,339 @@
+/* =========================================
+   1. 基础布局容器 (Wrapper)
+   ========================================= */
+.message-wrapper {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;      /* 消息间距 */
+    align-items: flex-start;  /* 顶部对齐 */
+}
+
+
+/* =========================================
+   2. 内容包裹层 (Content)
+   ========================================= */
+.message-wrapper .message-content {
+    max-width: 75%;           /* 限制气泡最大宽度 */
+    display: flex;
+    flex-direction: column;
+    overflow: visible !important; /* 关键：允许小尾巴溢出显示 */
+}
+
+/* AI 的内容对齐设置 */
+.message-wrapper.ai .message-content {
+    align-items: flex-start;  /* 内容左对齐 */
+    margin-left: 5px;        /* 隔开左侧头像 */
+}
+
+/* User 的内容对齐设置 */
+.message-wrapper.user .message-content {
+    align-items: flex-end;    /* 内容右对齐 */
+    margin-right: 5px;       /* 隔开右侧头像 */
+}
+
+/* =========================================
+   3. 气泡通用样式 (Bubble)
+   ========================================= */
+.message-wrapper .message-bubble {
+    position: relative;
+    padding: 8px 10px;       /* 内部留白 */
+    border-radius: 6px;       /* 圆角 */
+    font-size: 1.1rem;
+    line-height: 1.3;
+    
+
+    
+    /* 视觉属性 */
+    border: none;
+
+    
+    /* 修复尾巴显示的属性 */
+    overflow: visible !important; 
+    z-index: 1;
+}
+
+/* =========================================
+   4. AI (Char) 特定样式 & 尾巴
+   ========================================= */
+.message-wrapper.ai .message-bubble {
+    background-color: #fff; /* 深色背景 */
+    color: #222;            /* 白色文字 */
+}
+
+/* AI 左侧小三角 */
+.message-wrapper.ai .message-bubble::before {
+    content: '';
+    position: absolute;
+    top: 14px;
+    left: -6px;                /* 向左突出 */
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-right: 6px solid #fff; /* 颜色与背景一致 */
+    z-index: 2;
+}
+
+/* =========================================
+   5. User (用户) 特定样式 & 尾巴
+   ========================================= */
+.message-wrapper.user .message-bubble {
+    background-color: #95ED69; /* 微信绿背景 */
+    color: #000000;            /* 黑色文字 */
+}
+
+/* User 右侧小三角 */
+.message-wrapper.user .message-bubble::after {
+    content: '';
+    position: absolute;
+    top: 14px;
+    right: -6px;               /* 向右突出 */
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 6px solid #95ED69; /* 颜色与背景一致 */
+    z-index: 2;
+}
+
+/* =========================================
+   6. 其他元素 (头像与时间)
+   ========================================= */
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0; /* 防止头像被压缩 */
+}
+
+.msg-time {
+    display: none; 
+}
+
+
+
+/* =========================================
+   夜间模式主题
+   ========================================= */
+
+.app-header {
+    border-bottom: none;
+    text-align: center;
+    flex-shrink: 0;
+    background: #EEE;
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+}
+
+.app-header h1{
+    color: #161616;
+}
+
+.contact-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.contact-info p {
+    margin: 0;
+    font-size: 0.8rem;
+    color: #909090;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.header-icon-btn .icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+    overflow: visible;
+}
+
+.header-icon-btn.left {
+    color: #161616;
+    border: transparent;
+
+    background: rgba(236, 236, 236, 0);
+}
+.header-icon-btn.right {
+    color: #161616;
+    border: transparent;
+
+    background: rgba(236, 236, 236, 0);
+}
+
+.app-footer {
+    border-top: none;
+    background: #F2F2F2;
+    
+}
+
+#reroll-footer-btn {
+    border: transparent;
+    background: rgba(251, 251, 251, 0);
+    color: #222;
+    font-size: 1.2rem;
+}
+
+
+#send-button {
+    border: transparent;
+    background: rgba(251, 251, 251, 0);
+    color: #222;
+    font-size: 1.2rem;
+}
+
+#task-input {
+    border: transparent;
+    background: #fff ;
+    font-size: 1rem;
+    color: #222;
+    border-radius: 6px;
+}
+
+#task-input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.88) ;
+}
+
+#upload-image-btn {
+    border: transparent;
+    color: #222;
+    background: transparent;
+    font-size: 1.2rem;
+}
+
+
+#contact-list-container {
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.tab-bar{
+    background: #F2F2F2;
+    border-top: 1px solid rgb(189 189 189 / 70%);
+}
+
+#contact-list-wrapper {
+    background: rgb(255 255 255 / 50%);
+    /* border: 1px solid rgba(255, 255, 255, 0.3); */
+}
+
+.contact-info h3 {
+    margin: 0 0 5px 0;
+    font-size: 1rem;
+    color: #555;
+    font-weight: 600;
+}
+
+
+
+.desktop-card {
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.82);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.66);
+    color: #303030;
+    box-shadow: 0 8px 24px rgba(70, 83, 105, 0.10);
+    backdrop-filter: blur(14px) saturate(160%);
+    -webkit-backdrop-filter: blur(14px) saturate(160%);
+}
+
+
+.desktop-date-line, .desktop-lunar-line, .desktop-weather-line, .desktop-weather-temp-line {
+
+    color: rgba(48, 48, 48, 0.78);
+
+}
+
+button.desktop-card {
+    border: 1px solid rgba(255, 255, 255, 0.82);
+
+}
+
+.desktop-signature-card p {
+
+    color: #282828;
+
+}
+
+.desktop-settings-icon {
+
+    color: #555;
+}
+
+.desktop-settings-label {
+
+    color: rgba(60, 60, 60, 0.72);
+
+}
+
+.desktop-sync-icon {
+
+    color: #555;
+}
+
+.desktop-sync-text {
+
+    color: rgba(60, 60, 60, 0.74);
+
+}
+
+.desktop-card-label {
+
+    color: rgba(60, 60, 60, 0.62);
+}
+
+.desktop-switch-cell {
+
+    background: rgba(255, 255, 255, 0.48);
+
+    color: #333;
+}
+
+.desktop-todo-text {
+
+    color: #303030;
+
+}
+
+.desktop-async-status {
+
+    color: #303030;
+
+}
+
+
+.desktop-card-sub {
+
+    color: rgba(60, 60, 60, 0.58);
+}
+
+.tab-btn.active {
+    color: #888;
+}
+
+.tab-btn {
+    color: #CCC;
+
+}
+
+
+details.thought-process {
+    border: 1px solid rgba(150, 150, 150, 0.3);
+    background-color: rgba(177, 177, 177, 0.15);
+}
+
+details.thought-process .thought-content {
+    color: #777;
+    border-top: 1px dashed rgb(150, 150, 150, 0.3);
+}
+
+details.thought-process summary {
+    color: #777;
+}
+
